@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "KsyunDemoViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,14 +20,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] init];
-    self.window.frame = [UIScreen mainScreen].bounds;
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] init];
+//    self.window.frame = [UIScreen mainScreen].bounds;
+//    [self.window makeKeyAndVisible];
+//
+//    ViewController *demoVC = [[ViewController alloc] init];
+//    UINavigationController *demoNav = [[UINavigationController alloc] initWithRootViewController:demoVC];
+//    self.window.rootViewController = demoNav;
 
-    KsyunDemoViewController *demoVC = [[KsyunDemoViewController alloc] init];
-    UINavigationController *demoNav = [[UINavigationController alloc] initWithRootViewController:demoVC];
-    self.window.rootViewController = demoNav;
-    
     return YES;
 }
 

@@ -13,8 +13,6 @@
 		F1A6C7AB2006F19E00B5277B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7AA2006F19E00B5277B /* Assets.xcassets */; };
 		F1A6C7AE2006F19E00B5277B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7AC2006F19E00B5277B /* LaunchScreen.storyboard */; };
 		F1A6C7B12006F19E00B5277B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C7B02006F19E00B5277B /* main.m */; };
-		F1A6C7B92006F22900B5277B /* KsyunDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C7B82006F22900B5277B /* KsyunDemoViewController.m */; };
-		F1A6C7BC2006F27200B5277B /* KsyunTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C7BB2006F27100B5277B /* KsyunTableViewCell.m */; };
 		F1A6C7BF200709DD00B5277B /* KsyunAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A6C7BE200709DD00B5277B /* KsyunAdSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -165,9 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A6C7A62006F19E00B5277B /* ViewController.m in Sources */,
-				F1A6C7BC2006F27200B5277B /* KsyunTableViewCell.m in Sources */,
 				F1A6C7B12006F19E00B5277B /* main.m in Sources */,
-				F1A6C7B92006F22900B5277B /* KsyunDemoViewController.m in Sources */,
 				F1A6C7A32006F19E00B5277B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +299,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2D3U8UBLA;
+				DEVELOPMENT_TEAM = FYW64YS999;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KSCAdDemo/KsyunADSDK",
@@ -311,6 +308,12 @@
 				INFOPLIST_FILE = KSCAdDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lsqlite3",
+					"-lz",
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksyun.KSCAdDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +325,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2D3U8UBLA;
+				DEVELOPMENT_TEAM = FYW64YS999;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KSCAdDemo/KsyunADSDK",
@@ -330,6 +334,12 @@
 				INFOPLIST_FILE = KSCAdDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-lsqlite3",
+					"-lz",
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ksyun.KSCAdDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

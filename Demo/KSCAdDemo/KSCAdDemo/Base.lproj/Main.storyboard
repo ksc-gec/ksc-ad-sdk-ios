@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FBz-TE-HhN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FBz-TE-HhN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,6 +30,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SCC-25-SjF"/>
+                        <viewControllerLayoutGuide type="bottom" id="A6s-l2-y0u"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,11 +56,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="brN-qf-UYj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88G-sX-jza"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5FS-du-z4x" secondAttribute="bottom" constant="391" id="Kg3-Yp-hbY"/>
-                            <constraint firstItem="brN-qf-UYj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="PV8-Ak-uCp"/>
+                            <constraint firstItem="A6s-l2-y0u" firstAttribute="top" secondItem="5FS-du-z4x" secondAttribute="bottom" constant="391" id="Kg3-Yp-hbY"/>
+                            <constraint firstItem="brN-qf-UYj" firstAttribute="top" secondItem="SCC-25-SjF" secondAttribute="bottom" constant="112" id="PV8-Ak-uCp"/>
                             <constraint firstItem="brN-qf-UYj" firstAttribute="centerX" secondItem="5FS-du-z4x" secondAttribute="centerX" id="Xn0-St-S84"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="One Game" id="3RQ-iR-hoe"/>
                 </viewController>
