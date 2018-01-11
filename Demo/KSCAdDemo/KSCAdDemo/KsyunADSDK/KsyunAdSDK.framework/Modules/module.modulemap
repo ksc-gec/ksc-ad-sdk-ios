@@ -1,0 +1,6 @@
+framework module KsyunAdSDK {
+  umbrella header "KsyunAdSDK.h"
+
+  export *
+  module * { export * }
+}
