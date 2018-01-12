@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,26 +38,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brN-qf-UYj">
-                                <rect key="frame" x="156" y="200" width="62" height="30"/>
+                                <rect key="frame" x="156" y="391" width="62" height="30"/>
                                 <state key="normal" title="进入游戏"/>
                                 <connections>
                                     <action selector="enterGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a7T-zS-jme"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FS-du-z4x">
-                                <rect key="frame" x="141" y="357" width="92" height="30"/>
-                                <state key="normal" title="模拟游戏结束"/>
-                                <connections>
-                                    <action selector="simulateGameTerminal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rek-5l-pTR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="brN-qf-UYj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88G-sX-jza"/>
-                            <constraint firstItem="A6s-l2-y0u" firstAttribute="top" secondItem="5FS-du-z4x" secondAttribute="bottom" constant="391" id="Kg3-Yp-hbY"/>
-                            <constraint firstItem="brN-qf-UYj" firstAttribute="top" secondItem="SCC-25-SjF" secondAttribute="bottom" constant="112" id="PV8-Ak-uCp"/>
-                            <constraint firstItem="brN-qf-UYj" firstAttribute="centerX" secondItem="5FS-du-z4x" secondAttribute="centerX" id="Xn0-St-S84"/>
+                            <constraint firstItem="brN-qf-UYj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hOa-js-Ppv"/>
+                            <constraint firstItem="brN-qf-UYj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zpW-6h-ph9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="One Game" id="3RQ-iR-hoe"/>

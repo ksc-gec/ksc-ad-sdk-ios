@@ -66,6 +66,7 @@
 - (void)enterGameImmediately
 {
     UIViewController *gameSence = [[UIViewController alloc] init];
+    gameSence.view.backgroundColor = [UIColor whiteColor];
     gameSence.title = @"无奖励";
     [self.navigationController pushViewController:gameSence animated:YES];
 }
@@ -73,6 +74,7 @@
 - (void)enterGameWithReward
 {
     UIViewController *gameSence = [[UIViewController alloc] init];
+    gameSence.view.backgroundColor = [UIColor whiteColor];
     gameSence.title = @"有奖励";
     [self.navigationController pushViewController:gameSence animated:YES];
 }
@@ -82,22 +84,6 @@
     
 }
 
-- (IBAction)simulateGameTerminal:(id)sender
-{
-    // 本次无论是否 ad 已经缓存，直接进行播放
-    [KsyunAdSDK hasAd:@"91a877e4" callback:^(BOOL hasAd, KsyunAdErrCode errCode, NSString * _Nullable errMsg) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"获取额外一次机会？" message:@"观看视频后可以获得额外的机会" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"获取机会" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            // 展示广告
-            [KsyunAdSDK showAdWithAdSlotId:@"b50c602a" viewController:self adDelegate:self];
-        }]];
-        [alert addAction:[UIAlertAction actionWithTitle:@"放弃并退出" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            // 退出本次游戏场景
-            [alert dismissViewControllerAnimated:YES completion:nil];
-        }]];
-        [self presentViewController:alert animated:YES completion:nil];
-    }];
-}
 
 #pragma mark - KsyunADDelegate
 // 广告展示成功
@@ -138,10 +124,6 @@
         // 给用户增加奖励道具后进入游戏
         [self enterGameWithReward];
     }
-    if ([adSlotId isEqualToString:@"b50c602a"]) {
-        // 不退出游戏场景，增加一次重试机会
-        [self retryGame];
-    }
 }
 
 // 奖励视频获取奖励失败的回调
@@ -150,10 +132,6 @@
     if ([adSlotId isEqualToString:@"91a877e4"]) {
         // 立刻进入游戏, 用户没有奖励
         [self enterGameImmediately];
-    }
-    if ([adSlotId isEqualToString:@"b50c602a"]) {
-        // 立刻退出游戏, 用户没有选择再次获取机会
-        
     }
 }
 
