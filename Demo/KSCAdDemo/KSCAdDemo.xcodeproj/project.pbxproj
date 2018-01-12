@@ -14,6 +14,7 @@
 		F1A6C7AE2006F19E00B5277B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7AC2006F19E00B5277B /* LaunchScreen.storyboard */; };
 		F1A6C7B12006F19E00B5277B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C7B02006F19E00B5277B /* main.m */; };
 		F1A6C7BF200709DD00B5277B /* KsyunAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A6C7BE200709DD00B5277B /* KsyunAdSDK.framework */; };
+		F1A6C7C120088DE600B5277B /* KsyunAdBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7C020088DE600B5277B /* KsyunAdBundle.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +28,8 @@
 		F1A6C7AD2006F19E00B5277B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1A6C7AF2006F19E00B5277B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A6C7B02006F19E00B5277B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F1A6C7B72006F22800B5277B /* KsyunDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KsyunDemoViewController.h; sourceTree = "<group>"; };
-		F1A6C7B82006F22900B5277B /* KsyunDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KsyunDemoViewController.m; sourceTree = "<group>"; };
-		F1A6C7BA2006F27100B5277B /* KsyunTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KsyunTableViewCell.h; sourceTree = "<group>"; };
-		F1A6C7BB2006F27100B5277B /* KsyunTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KsyunTableViewCell.m; sourceTree = "<group>"; };
 		F1A6C7BE200709DD00B5277B /* KsyunAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KsyunAdSDK.framework; sourceTree = "<group>"; };
+		F1A6C7C020088DE600B5277B /* KsyunAdBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KsyunAdBundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,20 +63,13 @@
 		F1A6C7A02006F19E00B5277B /* KSCAdDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F1A6C7BD200709CB00B5277B /* KsyunADSDK */,
 				F1A6C7A12006F19E00B5277B /* AppDelegate.h */,
 				F1A6C7A22006F19E00B5277B /* AppDelegate.m */,
 				F1A6C7A42006F19E00B5277B /* ViewController.h */,
 				F1A6C7A52006F19E00B5277B /* ViewController.m */,
-				F1A6C7B72006F22800B5277B /* KsyunDemoViewController.h */,
-				F1A6C7B82006F22900B5277B /* KsyunDemoViewController.m */,
-				F1A6C7BA2006F27100B5277B /* KsyunTableViewCell.h */,
-				F1A6C7BB2006F27100B5277B /* KsyunTableViewCell.m */,
 				F1A6C7A72006F19E00B5277B /* Main.storyboard */,
-				F1A6C7AA2006F19E00B5277B /* Assets.xcassets */,
-				F1A6C7AC2006F19E00B5277B /* LaunchScreen.storyboard */,
-				F1A6C7AF2006F19E00B5277B /* Info.plist */,
-				F1A6C7B02006F19E00B5277B /* main.m */,
+				F1A6C7C220088E7700B5277B /* SupportFile */,
+				F1A6C7BD200709CB00B5277B /* KsyunADSDK */,
 			);
 			path = KSCAdDemo;
 			sourceTree = "<group>";
@@ -86,9 +77,21 @@
 		F1A6C7BD200709CB00B5277B /* KsyunADSDK */ = {
 			isa = PBXGroup;
 			children = (
+				F1A6C7C020088DE600B5277B /* KsyunAdBundle.bundle */,
 				F1A6C7BE200709DD00B5277B /* KsyunAdSDK.framework */,
 			);
 			path = KsyunADSDK;
+			sourceTree = "<group>";
+		};
+		F1A6C7C220088E7700B5277B /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				F1A6C7AA2006F19E00B5277B /* Assets.xcassets */,
+				F1A6C7AC2006F19E00B5277B /* LaunchScreen.storyboard */,
+				F1A6C7AF2006F19E00B5277B /* Info.plist */,
+				F1A6C7B02006F19E00B5277B /* main.m */,
+			);
+			path = SupportFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A6C7AE2006F19E00B5277B /* LaunchScreen.storyboard in Resources */,
+				F1A6C7C120088DE600B5277B /* KsyunAdBundle.bundle in Resources */,
 				F1A6C7AB2006F19E00B5277B /* Assets.xcassets in Resources */,
 				F1A6C7A92006F19E00B5277B /* Main.storyboard in Resources */,
 			);
@@ -305,7 +309,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KSCAdDemo/KsyunADSDK",
 				);
-				INFOPLIST_FILE = KSCAdDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KSCAdDemo/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -331,7 +335,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/KSCAdDemo/KsyunADSDK",
 				);
-				INFOPLIST_FILE = KSCAdDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KSCAdDemo/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

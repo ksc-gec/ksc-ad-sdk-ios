@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "KsyunDemoViewController.h"
 #import "ViewController.h"
 
 @interface AppDelegate ()

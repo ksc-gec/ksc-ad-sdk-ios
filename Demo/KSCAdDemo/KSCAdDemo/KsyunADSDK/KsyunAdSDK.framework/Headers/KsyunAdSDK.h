@@ -54,10 +54,6 @@ typedef NS_ENUM(NSUInteger, KsyunAdErrCode) {
     KsyunAdErrCode_APP_SLOT_ID_INVALID          = 1010,
     // 当前AppId没有任何广告位
     KsyunAdErrCode_APPID_NO_ADSLOT              = 1011,
-    // 展示广告的Controller不可用
-    KsyunAdErrCode_SHOW_AD_CONTROLLER_INVALID   = 1012,
-    // SDK重复初始化
-    KsyunAdErrCode_SDK_ALREADY_INIT             = 1013,
     // SDK服务端内部错误
     KsyunAdErrCode_SERVER_INTERNAL_ERROR        = 1100,
     // 服务端系统错误
