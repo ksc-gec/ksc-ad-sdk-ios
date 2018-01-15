@@ -21,10 +21,11 @@
     
     
     // Step 1 : 在使用奖励视频之前进行初始化, 并配置参数
-    KsyunAdSDKConfig *config = [KsyunAdSDKConfig sdkConfigWith:YES
-                                             adEnvironment:KsyunAdEnvironment_Test
-                                 isShowRewardVideoCloseBtn:YES
-                                    enableObtainPremission:NO rewardVideoCloseBtnShowTime:10];
+    KsyunAdSDKConfig *config = [KsyunAdSDKConfig sdkConfigWithDebugMode:YES
+                                                          adEnvironment:KsyunAdEnvironment_Release
+                                              isShowRewardVideoCloseBtn:YES
+                                                 enableObtainPremission:NO
+                                            rewardVideoCloseBtnShowTime:10];
     // 使用开发者自己的 appid 进行初始化
     [KsyunAdSDK initializeWithAppid:@"d86d3e47" sdkConfig:config successBlock:^(NSDictionary * _Nullable info) {
         // 初始化完成， info 字典中带有在后台配置的广告位信息

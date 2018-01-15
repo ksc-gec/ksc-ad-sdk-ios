@@ -10,12 +10,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, KsyunAdEnvironment) {
-    // 开发环境
-    KsyunAdEnvironment_Develop  = 0,
-    // 测试
-    KsyunAdEnvironment_Test  = 1,
     // 线上生产环境
-    KsyunAdEnvironment_Production  = 2,
+    KsyunAdEnvironment_Release  = 0,
+    // 开发环境
+    KsyunAdEnvironment_Develop  = 1,
 };
 
 typedef NS_ENUM(NSUInteger, KsyunAdInitStatus) {
@@ -135,11 +133,11 @@ typedef NS_ENUM(NSUInteger, KsyunRewardVideoAdErrCode) {
 // 是否允许SDK主动获取权限，网络、定位、多媒体
 @property(nonatomic, assign, readonly) BOOL enableObtainPremission;
 
-+ (KsyunAdSDKConfig *_Nonnull)sdkConfigWith:(BOOL)isDebugMode
-                              adEnvironment:(KsyunAdEnvironment)environment
-                  isShowRewardVideoCloseBtn:(BOOL)isShowRewardVideoCloseBtn
-                     enableObtainPremission:(BOOL)enableObtainPremission
-                rewardVideoCloseBtnShowTime:(NSUInteger)showTime;
++ (KsyunAdSDKConfig *_Nonnull)sdkConfigWithDebugMode:(BOOL)isDebugMode
+                                       adEnvironment:(KsyunAdEnvironment)environment
+                           isShowRewardVideoCloseBtn:(BOOL)isShowRewardVideoCloseBtn
+                              enableObtainPremission:(BOOL)enableObtainPremission
+                         rewardVideoCloseBtnShowTime:(NSUInteger)showTime;
 
 @end
 
