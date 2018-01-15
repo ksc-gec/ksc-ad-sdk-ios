@@ -19,17 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // b50c602a
-    // 91a877e4
-    // 6cc1c288
     
-    // Step 1 : 在使用奖励视频之前进行初始化
-    // 设置配置项目
+    // Step 1 : 在使用奖励视频之前进行初始化, 并配置参数
     KsyunAdSDKConfig *config = [KsyunAdSDKConfig sdkConfigWith:YES
                                              adEnvironment:KsyunAdEnvironment_Test
                                  isShowRewardVideoCloseBtn:YES
                                     enableObtainPremission:NO rewardVideoCloseBtnShowTime:10];
-    // 初始化 sdk
+    // 使用开发者自己的 appid 进行初始化
     [KsyunAdSDK initializeWithAppid:@"d86d3e47" sdkConfig:config successBlock:^(NSDictionary * _Nullable info) {
         // 初始化完成， info 字典中带有在后台配置的广告位信息
         // 初始化完成后可以考虑进行广告资源预先加载，这是一个可选项
@@ -43,10 +39,12 @@
 
 - (IBAction)enterGame:(id)sender
 {
-    // 用户即将进入游戏场景，提示是否通过观看奖励视频获取额外奖励
-    
-    // 判断该广告位是否已经有缓存好的资源，已缓存的广告可以直接播放，未缓存的广告需要使用网络在线播放
-    __weak typeof(self) weakSelf = self;
+    /** 用户即将进入游戏场景，提示是否通过观看奖励视频获取额外奖励
+     *  判断该广告位是否已经有缓存好的资源，已缓存的广告可以直接播放，未缓存的广告需要使用网络在线播放
+     *
+     *  选择合适的广告位
+     */
+     __weak typeof(self) weakSelf = self;
     [KsyunAdSDK hasAd:@"b50c602a" callback:^(BOOL hasAd, KsyunAdErrCode errCode, NSString * _Nullable errMsg) {
         if (hasAd) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"需要获取额外奖励吗？" message:@"观看视频后可以获得额外的道具，帮助你更容易通关哦" preferredStyle:UIAlertControllerStyleAlert];
