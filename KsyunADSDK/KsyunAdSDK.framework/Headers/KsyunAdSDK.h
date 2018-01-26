@@ -143,8 +143,6 @@ typedef NS_ENUM(NSUInteger, KsyunRewardVideoAdErrCode) {
 
 @interface KsyunAdSDK : NSObject
 
-+ (void)resetAdSDK;
-
 + (KsyunAdSDK * _Nonnull)sharedInstance;
 
 // 初始化方法
@@ -168,8 +166,14 @@ typedef NS_ENUM(NSUInteger, KsyunRewardVideoAdErrCode) {
 // 预加载
 + (void)preloadAd:(id<KsyunPreloadADDelegate> _Nullable)delegate;
 
+// 预加载单个广告位
++ (void)preloadAd:(NSString * _Nonnull)adSlotId delegate:(id<KsyunPreloadADDelegate> _Nullable)delegate;
+
 // 判断当前广告位是否有广告
-+ (void)hasAd:(NSString * _Nonnull)adSlotId callback:(void(^_Nullable)(BOOL hasAd, KsyunAdErrCode errCode, NSString * _Nullable errMsg))callback;
++ (BOOL)hasAd:(NSString * _Nonnull)adSlotId;
+
+// 判断当前广告位是否有加载完资源的广告
++ (BOOL)hasLocalAd:(NSString * _Nonnull)adSlotId;
 
 // 展示广告
 + (void)showAdWithAdSlotId:(NSString * _Nonnull)adSlotId

@@ -22,7 +22,7 @@
     
     // Step 1 : 在使用奖励视频之前进行初始化, 并配置参数
     KsyunAdSDKConfig *config = [KsyunAdSDKConfig sdkConfigWithDebugMode:YES
-                                                          adEnvironment:KsyunAdEnvironment_Release
+                                                          adEnvironment:KsyunAdEnvironment_Develop
                                               isShowRewardVideoCloseBtn:YES
                                                  enableObtainPremission:NO
                                             rewardVideoCloseBtnShowTime:10];
@@ -46,19 +46,17 @@
      *  选择合适的广告位
      */
      __weak typeof(self) weakSelf = self;
-    [KsyunAdSDK hasAd:@"b50c602a" callback:^(BOOL hasAd, KsyunAdErrCode errCode, NSString * _Nullable errMsg) {
-        if (hasAd) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"需要获取额外奖励吗？" message:@"观看视频后可以获得额外的道具，帮助你更容易通关哦" preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"获取免费道具" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                // 展示广告
-                [KsyunAdSDK showAdWithAdSlotId:@"91a877e4" viewController:self adDelegate:self];
-            }]];
-            [alert addAction:[UIAlertAction actionWithTitle:@"放弃奖励" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                [weakSelf enterGameImmediately];
-            }]];
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-    }];
+    if ([KsyunAdSDK hasAd:@"b50c602a"]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"需要获取额外奖励吗？" message:@"观看视频后可以获得额外的道具，帮助你更容易通关哦" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"获取免费道具" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            // 展示广告
+            [KsyunAdSDK showAdWithAdSlotId:@"91a877e4" viewController:self adDelegate:self];
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"放弃奖励" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf enterGameImmediately];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
     
 }
 
