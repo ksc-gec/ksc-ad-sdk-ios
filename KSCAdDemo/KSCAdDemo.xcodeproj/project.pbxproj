@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		247AE4A2201AFF7C00D9554A /* KsyunAdBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 247AE4A0201AFF7C00D9554A /* KsyunAdBundle.bundle */; };
+		247AE4A3201AFF7D00D9554A /* KsyunAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247AE4A1201AFF7C00D9554A /* KsyunAdSDK.framework */; };
 		F1A6C7A32006F19E00B5277B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C7A22006F19E00B5277B /* AppDelegate.m */; };
 		F1A6C7A62006F19E00B5277B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C7A52006F19E00B5277B /* ViewController.m */; };
 		F1A6C7A92006F19E00B5277B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7A72006F19E00B5277B /* Main.storyboard */; };
 		F1A6C7AB2006F19E00B5277B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7AA2006F19E00B5277B /* Assets.xcassets */; };
 		F1A6C7AE2006F19E00B5277B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7AC2006F19E00B5277B /* LaunchScreen.storyboard */; };
 		F1A6C7B12006F19E00B5277B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C7B02006F19E00B5277B /* main.m */; };
-		F1A6C7BF200709DD00B5277B /* KsyunAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A6C7BE200709DD00B5277B /* KsyunAdSDK.framework */; };
-		F1A6C7C120088DE600B5277B /* KsyunAdBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1A6C7C020088DE600B5277B /* KsyunAdBundle.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		247AE4A0201AFF7C00D9554A /* KsyunAdBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = KsyunAdBundle.bundle; path = ../../KsyunADSDK/KsyunAdBundle.bundle; sourceTree = "<group>"; };
+		247AE4A1201AFF7C00D9554A /* KsyunAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KsyunAdSDK.framework; path = ../../KsyunADSDK/KsyunAdSDK.framework; sourceTree = "<group>"; };
 		F1A6C79E2006F19E00B5277B /* KSCAdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSCAdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A6C7A12006F19E00B5277B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1A6C7A22006F19E00B5277B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,8 +30,6 @@
 		F1A6C7AD2006F19E00B5277B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1A6C7AF2006F19E00B5277B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A6C7B02006F19E00B5277B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F1A6C7BE200709DD00B5277B /* KsyunAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KsyunAdSDK.framework; sourceTree = "<group>"; };
-		F1A6C7C020088DE600B5277B /* KsyunAdBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KsyunAdBundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A6C7BF200709DD00B5277B /* KsyunAdSDK.framework in Frameworks */,
+				247AE4A3201AFF7D00D9554A /* KsyunAdSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,24 +63,16 @@
 		F1A6C7A02006F19E00B5277B /* KSCAdDemo */ = {
 			isa = PBXGroup;
 			children = (
+				247AE4A0201AFF7C00D9554A /* KsyunAdBundle.bundle */,
+				247AE4A1201AFF7C00D9554A /* KsyunAdSDK.framework */,
 				F1A6C7A12006F19E00B5277B /* AppDelegate.h */,
 				F1A6C7A22006F19E00B5277B /* AppDelegate.m */,
 				F1A6C7A42006F19E00B5277B /* ViewController.h */,
 				F1A6C7A52006F19E00B5277B /* ViewController.m */,
 				F1A6C7A72006F19E00B5277B /* Main.storyboard */,
 				F1A6C7C220088E7700B5277B /* SupportFile */,
-				F1A6C7BD200709CB00B5277B /* KsyunADSDK */,
 			);
 			path = KSCAdDemo;
-			sourceTree = "<group>";
-		};
-		F1A6C7BD200709CB00B5277B /* KsyunADSDK */ = {
-			isa = PBXGroup;
-			children = (
-				F1A6C7C020088DE600B5277B /* KsyunAdBundle.bundle */,
-				F1A6C7BE200709DD00B5277B /* KsyunAdSDK.framework */,
-			);
-			path = KsyunADSDK;
 			sourceTree = "<group>";
 		};
 		F1A6C7C220088E7700B5277B /* SupportFile */ = {
@@ -153,7 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A6C7AE2006F19E00B5277B /* LaunchScreen.storyboard in Resources */,
-				F1A6C7C120088DE600B5277B /* KsyunAdBundle.bundle in Resources */,
+				247AE4A2201AFF7C00D9554A /* KsyunAdBundle.bundle in Resources */,
 				F1A6C7AB2006F19E00B5277B /* Assets.xcassets in Resources */,
 				F1A6C7A92006F19E00B5277B /* Main.storyboard in Resources */,
 			);
@@ -307,7 +299,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/KSCAdDemo/KsyunADSDK",
+					"$(PROJECT_DIR)/../KsyunADSDK",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/KSCAdDemo/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -333,7 +325,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/KSCAdDemo/KsyunADSDK",
+					"$(PROJECT_DIR)/../KsyunADSDK",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/KSCAdDemo/SupportFile/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
