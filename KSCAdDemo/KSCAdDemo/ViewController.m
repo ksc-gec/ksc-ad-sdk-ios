@@ -50,7 +50,7 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"需要获取额外奖励吗？" message:@"观看视频后可以获得额外的道具，帮助你更容易通关哦" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"获取免费道具" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             // 展示广告
-            [KsyunAdSDK showAdWithAdSlotId:@"91a877e4" viewController:self adDelegate:self];
+            [KsyunAdSDK showAdWithAdSlotId:@"b50c602a" viewController:self adDelegate:self];
         }]];
         [alert addAction:[UIAlertAction actionWithTitle:@"放弃奖励" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             [weakSelf enterGameImmediately];
